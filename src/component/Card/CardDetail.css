@@ -1,0 +1,61 @@
+/* Parent container for the card details */
+.card-detail-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px; /* Set a maximum width for better readability */
+  margin: 0 auto; /* Center content */
+}
+
+/* Title styling */
+.card-detail-container h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Image styling */
+.card-detail-container img {
+  max-width: 100%; /* Ensure the image resizes within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for better visuals */
+  margin-bottom: 15px;
+}
+
+/* Description styling */
+.card-detail-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #555;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .card-detail-container {
+    flex-direction: row; /* Place image and text side by side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Add space between items */
+  }
+
+  .card-detail-container img {
+    flex: 1; /* Allow image to take 1 part of available space */
+  }
+
+  .card-detail-container div {
+    flex: 2; /* Allow text to take 2 parts of available space */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  .card-detail-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-detail-container p {
+    font-size: 0.9rem;
+  }
+}
